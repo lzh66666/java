@@ -1,0 +1,29 @@
+package nuc.ss.p113lzh.t1;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class QueueCaller {
+	private List<String> queue;
+
+	public QueueCaller() {
+		queue= new ArrayList<String>();
+	}
+	
+	public int size() {
+		return 0;
+	}
+	
+	public void fetchNumber(String patient) {
+		
+	}
+	
+	public void showPatients() {
+		
+	}
+	
+	public void callNumber() {
+		
+	}
+	
+}

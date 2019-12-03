@@ -1,0 +1,13 @@
+package nuc.ss.p113lzh.t1;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class QueueCaller {
+	private List<String> queue;
+
+	public QueueCaller() {
+		queue= new ArrayList<String>();
+	}
+	
+}

@@ -1,0 +1,6 @@
+package nuc.ss.p113lzh.t1;
+
+public class QueueCaller {
+	private ArrayList<String> queue = new ArrayList<String>();
+	
+}

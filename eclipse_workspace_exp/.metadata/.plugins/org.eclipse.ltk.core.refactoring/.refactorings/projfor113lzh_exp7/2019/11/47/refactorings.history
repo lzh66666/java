@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;nuc.ss.clzh&apos; to &apos;nuc.ss.p113lzh.t1&apos;&#x0D;&#x0A;- Original project: &apos;projfor113lzh_exp7&apos;&#x0D;&#x0A;- Original element: &apos;projfor113lzh_exp7/src/nuc.ss.clzh&apos;&#x0D;&#x0A;- Renamed element: &apos;projfor113lzh_exp7/src/nuc.ss.p113lzh.t1&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;nuc.ss.clzh&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;nuc.ss.clzh" name="nuc.ss.p113lzh.t1" qualified="false" references="true" stamp="1574489860865" textual="false" version="1.0"/>
+</session>
