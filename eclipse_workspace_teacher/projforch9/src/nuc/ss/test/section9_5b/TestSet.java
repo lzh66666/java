@@ -1,0 +1,49 @@
+package nuc.ss.test.section9_5b;
+
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+import nuc.ss.test.section9_4.Student;
+
+public class TestSet {
+
+	public static void main(String[] args) {
+		//声明Set对象，创建HashSet对象
+		Set<Student> set = new HashSet<Student>();
+		//添加元素
+		Student s1 = new Student(18001, "王宝国", 20);
+		Student s2 = new Student(18006, "张春晖", 21);
+		Student s3 = new Student(18003, "李高兴", 19);
+		Student s4 = new Student(18004, "彭凯利", 18);
+		Student s5 = new Student(18003, "李高兴", 19);
+		set.add(s1);
+		set.add(s2);
+		set.add(s3);
+		set.add(s4);
+		set.add(s5);
+		
+		//遍历：使用for循环
+		System.out.println("\n用for循环遍历输出set中所有元素:");
+		Object[] os = set.toArray();
+		for(int i = 0; i < os.length; i++){
+			System.out.println(os[i]);	
+		}
+		
+		//遍历：使用迭代器遍历方式
+		System.out.println("\n用迭代器遍历输出set中所有元素:");
+		Iterator<Student> iter = set.iterator();
+		while (iter.hasNext()) {
+			System.out.println(iter.next());
+		}
+		
+		//删除元素
+		set.remove(s2);
+		
+		//遍历：使用增强for循环
+		System.out.println("\n删除操作后,用增强for循环遍历输出set中所有元素:");
+		for(Student stu : set){
+			System.out.println(stu);			
+		}
+	}
+}

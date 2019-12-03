@@ -1,0 +1,15 @@
+package nuc.ss.test5;
+
+import javax.swing.JFrame;
+
+public class TestNumberJFrame {
+	public static void main(String[] args) {
+		
+	}
+}
+
+class NumberJFrame extends JFrame {
+	public NumberJFrame(String title) {
+		super()
+	}
+}

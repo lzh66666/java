@@ -1,0 +1,53 @@
+package nuc.ss.test.section9_8b;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class TestComparable1 {
+
+	public static void main(String[] args) {
+		// 字符串排序
+		String str1 = new String("CHINA");
+		String str2 = new String("USA");
+		String str3 = "Japan";
+		String str4 = "Italy";
+		String str5 = new String("India");
+		
+		// 方案1：采用具有排序功能的容器类（ TreeSet），放入实现了排序算法的对象，边放入边排序。
+		Set<String> set = new TreeSet<String>();
+		set.add(str1);
+		set.add(str2);
+		set.add(str3);
+		set.add(str4);
+		set.add(str5);
+		
+		// 采用普通for循环输出方案1的排序结果
+		System.out.println("采用方案1的排序结果：");
+		Object[] o = set.toArray();
+		for(int i = 0; i < o.length; i++) {
+			System.out.println(o[i]);
+		}
+	
+		// 方案2：采用Collections工具类，为容器中的元素排序。
+		List<String> list = new ArrayList<String>();
+		
+		list.add(str1);
+		list.add(str2);
+		list.add(str3);
+		list.add(str4);
+		list.add(str5);
+	
+		Collections.sort(list);
+		
+		// 使用普通for循环输出方案2的排序结果
+		System.out.println("采用方案2的排序结果：");
+		Object[] o2 = list.toArray();
+		for(int i = 0; i < o2.length; i++) {
+			System.out.println(o2[i]);
+		}	
+	}
+}
+

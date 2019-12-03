@@ -1,0 +1,27 @@
+教学内容与案例代码包路径的对应关系：
+
+6.1节 成员内部类 
+   section6_1
+   section6_1a
+
+6.2节 匿名内部类 案例代码：
+   section6_2
+   section6_2_a
+   section6_2_b
+
+6.3节 异常概述
+   section6_3
+
+6.4节 处理异常
+   section6_3
+
+6.5节 抛出异常
+   section6_5
+   section6_5b
+   section6_5c
+   section6_5d
+   section6_5e
+
+6.6 节 自定义异常
+   section6_6
+   section6_6b

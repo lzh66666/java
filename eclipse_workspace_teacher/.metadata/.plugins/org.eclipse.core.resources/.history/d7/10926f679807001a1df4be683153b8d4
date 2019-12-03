@@ -1,0 +1,27 @@
+package nuc.ss.test5;
+
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+
+public class TestNumberJFrame {
+	public static void main(String[] args) {
+		new NumberJFrame("请输入10个整数");
+	}
+}
+
+class NumberJFrame extends JFrame {
+	JTextField tf;
+	
+	public NumberJFrame(String title) {
+		super(title);
+		setBounds(200,200,300,300);
+		setResizable(false);
+		init();
+		setVisible(true);
+	}
+
+	private void init() {
+		// TODO Auto-generated method stub
+		
+	}
+}

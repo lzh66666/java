@@ -1,0 +1,98 @@
+package nuc.ss.test.section8_7;
+
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
+public class TestCalculator {
+
+	public static void main(String[] args) {
+		new Calculator();
+
+	}
+
+}
+
+class Calculator extends JFrame {
+	JTextField t1, t2, t3, t4;
+	JLabel l1, l2, l3, l4;
+	JButton resetbtn, countbtn;
+	
+	public Calculator() {
+		super("简易计算器");
+		setSize(200, 260);
+		setLocation(560, 240);
+		setResizable(false);
+		init();
+		setVisible(true);
+	}
+
+	private void init() {
+		setLayout(new GridLayout(5, 2, 5, 5));
+		
+		// 创建4个标签对象
+		l1 = new JLabel("操作数：", JLabel.LEFT);
+		l2 = new JLabel("运算符：", JLabel.RIGHT);
+		l3 = new JLabel("操作数：", JLabel.RIGHT);
+		l4 = new JLabel("运算结果：", JLabel.RIGHT);
+		
+		// 创建4个单行文本框对象
+		t1 = new JTextField(20);
+		t2 = new JTextField(20);
+		t3 = new JTextField(20);
+		t4 = new JTextField(20);
+		t4.setEditable(false);
+		
+		// 创建2个按钮：重置按钮和开始运算按钮
+		resetbtn = new JButton("重置");
+		countbtn = new JButton("开始计算");
+		 
+		// 在当前容器中添加各个组件对象（标签、单行文本框、按钮）
+		add(l1); add(t1);
+		add(l2); add(t2);
+		add(l3); add(t3);
+		add(l4); add(t4);		 
+		add(resetbtn); add(countbtn);
+		 
+		// 为重置按钮注册事件监听器对象，以监听并响应（处理）相应事件
+		resetbtn.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				t1.setText("");
+				t2.setText("");
+				t3.setText("");
+				t4.setText("");
+			}
+		});
+		 
+		// 为开始运算按钮注册事件监听器对象，以监听并响应（处理）相应事件
+		countbtn.addActionListener(new ActionListener() {			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				btnClick();				
+			}
+		});
+	}
+	
+	private void btnClick(){
+		float op1=Float.parseFloat(t1.getText().trim());
+		float op2=Float.parseFloat(t3.getText().trim());
+		char opr=(t2.getText().trim()).charAt(0);		
+		switch(opr){
+		    case '+': t4.setText(""+(op1+op2));break;
+		    case '-': t4.setText(""+(op1-op2));break;
+		    case '*': t4.setText(""+(op1*op2));break;
+		    case '/': t4.setText(""+(op1/op2));break;
+		    default: JOptionPane.showMessageDialog(t4, "表达式错误", "错误提示", 
+		    		                               JOptionPane.WARNING_MESSAGE);
+		}
+	}
+
+}
