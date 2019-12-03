@@ -1,0 +1,12 @@
+package nuc.ss.singleton;
+
+/**
+ * 测试饿汉式单例模式
+ * @author 卢泽华
+ * @version 2019 11 30 14:52
+ * 
+ */
+
+public class SingletonDemo1 {
+	private static SingletonDemo1 instance
+}

@@ -1,0 +1,19 @@
+package nuc.ss.pro;
+
+/**
+ * 一个场景,共同的资源
+ * 
+ * @author Administrator
+ *
+ */
+public class Movie {
+	private String pic;
+
+	public synchronized void play(String pic) {
+		this.pic = pic;
+	}
+
+	public synchronized void watch(String pic) {
+
+	}
+}

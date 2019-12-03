@@ -1,0 +1,14 @@
+package nuc.ss.thread.syn;
+
+public class SynDemo03 {
+	
+	public static void main(String[] args) {
+		
+	}
+	
+}
+
+class Test implements Runnable{
+	Object goods;
+	Object money;
+}

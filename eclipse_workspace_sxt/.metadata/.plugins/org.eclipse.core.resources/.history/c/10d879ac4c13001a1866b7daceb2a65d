@@ -1,0 +1,13 @@
+package nuc.ss.singleton;
+
+/**
+ *  测试多线程环境下五种创建单例模式的效率
+ * @author 卢泽华
+ * @version 2019 11 30 16:34
+ *
+ */
+public class Client3 {
+	public static void main(String[] args) {
+		
+	}
+}

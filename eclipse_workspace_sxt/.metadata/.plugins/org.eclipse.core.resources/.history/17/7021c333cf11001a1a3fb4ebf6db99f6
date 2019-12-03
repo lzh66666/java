@@ -1,0 +1,49 @@
+package nuc.ss.thread.syn;
+
+public class SynDemo03 {
+	
+	public static void main(String[] args) {
+		Object g = new Object();
+		Object m = new Object();
+		Test t1 = new Test(g,m);
+		
+		Thread proxy = new Thread(t1);
+		
+		proxy.start();
+	}
+	
+}
+
+class Test implements Runnable{
+	Object goods;
+	Object money;
+	
+	@Override
+	public void run() {
+		while(true) {
+			test();
+		}
+	}
+	
+	
+	public Test(Object goods, Object money) {
+		super();
+		this.goods = goods;
+		this.money = money;
+	}
+
+
+	public void test() {
+		synchronized(goods) {
+			try {
+				Thread.sleep(100);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			synchronized(money) {
+				
+			}
+		}
+		System.out.println("Ò»ÊÖ¸øÇ®");
+	}
+}

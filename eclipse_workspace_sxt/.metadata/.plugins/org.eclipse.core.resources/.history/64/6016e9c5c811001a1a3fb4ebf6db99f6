@@ -1,0 +1,80 @@
+package nuc.ss.thread.syn;
+
+/**
+ * a单例设计模式:确保一个类只有一个对象(懒汉模式)
+ * 
+ * @author Administrator
+ *
+ */
+public class SynDemo02 {
+
+	public static void main(String[] args) {
+/*		Jvm jvm1 = Jvm.getinstance();
+		Jvm jvm2 = Jvm.getinstance();
+
+		System.out.println(jvm1);
+		System.out.println(jvm2);
+*/
+		JvmThread thread1 = new JvmThread(100);
+		JvmThread thread2 = new JvmThread(500);
+	}
+}
+
+class JvmThread extends Thread {
+	private long time;
+
+	public JvmThread() {
+
+	}
+
+	public JvmThread(long time) {
+		this.time = time;
+	}
+
+	@Override
+	public void run() {
+		System.out.println(Thread.currentThread().getName() + "-->创建: " + Jvm.getinstance(time));
+	}
+}
+
+/**
+ * 单例设计模式 确保一个类只有一个对象 
+ * 懒汉式 double checking 
+ * 1、构造器私有化,避免外部直接创建对象 
+ * 2、声明一个私有的静态变量
+ * 3、创建一个对外的公共的静态方法,访问该变量,如果变量没有创建对象,创建该对象
+ * 
+ * @author Administrator
+ *
+ */
+class Jvm {
+	// 声明一个私有的静态变量
+	private static Jvm instance = null;
+
+	// 构造器私有化,避免外部直接创建对象
+	private Jvm() {
+
+	}
+
+	// 创建一个对外的公共的静态方法,访问该变量
+	public static Jvm getinstance() {
+		if (instance == null) {
+			instance = new Jvm();
+		}
+		return instance;
+	}
+
+	// 创建一个对外的公共的静态方法,访问该变量
+	public static Jvm getinstance1(long time) {
+		if (instance == null) {
+			try {
+				Thread.sleep(time);//延时,放大错误
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			instance = new Jvm();
+		}
+		return instance;
+	}
+}

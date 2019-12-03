@@ -1,0 +1,10 @@
+package nuc.ss.singleton;
+
+/**
+ * 测试枚举式实现单例模式(没有延时加载)
+ * @author 卢泽华
+ *
+ */
+public class SingletonDemo5 {
+
+}

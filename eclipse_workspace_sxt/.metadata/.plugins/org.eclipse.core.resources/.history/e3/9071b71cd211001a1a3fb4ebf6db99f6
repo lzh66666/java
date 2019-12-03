@@ -1,0 +1,9 @@
+package nuc.ss.pro;
+
+public class App {
+	//共同地资源
+	Movie m = new Movie();
+	
+	//多线程
+	Player p
+}

@@ -1,0 +1,10 @@
+package nuc.ss.singleton;
+
+/**
+ * 测试懒汉式单例模式(如何防止反射和反序列化漏洞)
+ * @author 卢泽华
+ *
+ */
+public class SingletonDemo6 {
+	
+}

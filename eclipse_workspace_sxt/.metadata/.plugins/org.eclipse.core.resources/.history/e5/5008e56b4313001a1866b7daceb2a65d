@@ -1,0 +1,25 @@
+package nuc.ss.singleton;
+
+public class Client {
+	public static void main(String[] args) {
+		SingletonDemo1 s1 = SingletonDemo1.getinstance();
+		SingletonDemo1 s11 = SingletonDemo1.getinstance();
+		System.out.println(s1);
+		System.out.println(s11);
+		
+		SingletonDemo2 s2 = SingletonDemo2.getinstance();
+		SingletonDemo2 s22 = SingletonDemo2.getinstance();
+		System.out.println(s2);
+		System.out.println(s22);
+		
+		SingletonDemo3 s3 = SingletonDemo3.getinstance();
+		SingletonDemo3 s33 = SingletonDemo3.getinstance();
+		System.out.println(s3);
+		System.out.println(s33);
+		
+		SingletonDemo4 s4 = SingletonDemo4.getinstance();
+		SingletonDemo4 s44 = SingletonDemo4.getinstance();
+		System.out.println(s4);
+		System.out.println(s44);
+	}
+}

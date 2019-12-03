@@ -1,0 +1,10 @@
+package nuc.ss.pro;
+
+/**
+ * ЩњВњеп
+ * @author Administrator
+ *
+ */
+public class Player {
+	private Movie m;
+}

@@ -1,0 +1,7 @@
+package nuc.ss.singleton;
+
+public class Client {
+	public static void main(String[] args) {
+		SingletonDemo1 s1 = SingletonDemo1.getinstance();
+	}
+}

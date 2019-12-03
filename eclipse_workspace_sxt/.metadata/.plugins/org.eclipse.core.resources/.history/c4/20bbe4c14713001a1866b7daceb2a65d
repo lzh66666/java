@@ -1,0 +1,12 @@
+package nuc.ss.singleton;
+
+
+public class Client2 {
+	public static void main(String[] args) {
+		SingletonDemo6 s1 = SingletonDemo6.getInstance();
+		SingletonDemo6 s2 = SingletonDemo6.getInstance();
+		
+		System.out.println(s1);
+		System.out.println(s2);
+	}
+}

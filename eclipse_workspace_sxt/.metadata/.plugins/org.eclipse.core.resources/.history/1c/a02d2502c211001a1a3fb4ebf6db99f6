@@ -1,0 +1,24 @@
+package nuc.ss.thread.syn;
+
+public class SynDemo01 {
+	public static void main(String[] args) {
+		
+	}
+}
+
+/**
+ * 线程安全的类
+ * @author 卢泽华
+ *
+ */
+
+class Web12306 implements Runnable {
+	
+	private int num = 10;
+	private boolean flag =true;
+	
+	@Override
+	public void run() {
+		
+	}
+}

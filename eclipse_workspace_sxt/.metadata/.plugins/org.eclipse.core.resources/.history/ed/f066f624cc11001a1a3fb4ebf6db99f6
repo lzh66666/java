@@ -1,0 +1,12 @@
+package nuc.ss.thread.syn;
+
+/**
+ * 
+ * @author Administrator
+ *
+ */
+public class MyJvm {
+	public static void main(String[] args) {
+		
+	}
+}
