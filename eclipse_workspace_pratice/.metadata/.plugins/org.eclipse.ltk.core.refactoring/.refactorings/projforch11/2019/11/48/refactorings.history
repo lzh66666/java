@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;nuc.ss.test.section11_4&apos; to &apos;testThread/src&apos;&#x0D;&#x0A;- Original project: &apos;projforch11&apos;&#x0D;&#x0A;- Destination element: &apos;testThread/src&apos;&#x0D;&#x0A;- Original element: &apos;projforch11/src/nuc.ss.test.section11_4&apos;" description="Copy package" destination="=testThread/src" element1="/src&lt;nuc.ss.test.section11_4" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1574760019645" version="1.0"/>
+</session>

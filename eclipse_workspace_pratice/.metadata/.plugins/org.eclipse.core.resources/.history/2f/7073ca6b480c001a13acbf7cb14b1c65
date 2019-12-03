@@ -1,0 +1,18 @@
+package nuc.ss.burrered;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
+public class TestBuffer {
+	public static void main(String[] args) {
+		try {
+			FileReader filein = new FileReader("score.txt");
+			BufferedReader bin = new BufferedReader(filein)
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}

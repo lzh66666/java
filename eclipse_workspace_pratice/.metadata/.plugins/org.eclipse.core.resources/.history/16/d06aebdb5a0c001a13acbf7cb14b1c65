@@ -1,0 +1,12 @@
+package nuc.ss.file;
+
+/**
+ * 用字符流完成给定文件的测定
+ * @author 卢泽华
+ *
+ */
+public class TestTextCopy {
+	public static void main(String[] args) {
+		
+	}
+}

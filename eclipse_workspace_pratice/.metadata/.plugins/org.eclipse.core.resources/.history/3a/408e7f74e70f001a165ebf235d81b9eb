@@ -1,0 +1,15 @@
+package nuc.ss.test;
+
+public class TestMyThread {
+	public static void main(String[] args) {
+		MyThread th = new MyThread();
+		th.start();//线程启动到就绪状态
+	}
+}
+
+class MyThread extends Thread{
+	@Override
+	public void run() {
+		System.out.println("线程执行");
+	}
+}

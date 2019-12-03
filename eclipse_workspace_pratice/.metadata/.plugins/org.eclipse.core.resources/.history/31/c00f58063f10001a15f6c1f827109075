@@ -1,0 +1,14 @@
+package nuc.ss.test4;
+
+public class TestJoin {
+	public static void main(String[] args) {
+		
+	}
+}
+
+
+class Mythread extends Thread{
+	public Mythread(String name) {
+		
+	}
+}

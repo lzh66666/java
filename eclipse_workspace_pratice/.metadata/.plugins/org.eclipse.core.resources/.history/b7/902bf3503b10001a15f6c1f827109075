@@ -1,0 +1,17 @@
+package nuc.ss.test4;
+
+public class ClassRoom implements Runnable{
+	Thread student,teacher;
+	@Override
+	public void run() {
+		if(Thread.currentThread() == student) {
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		
+	}
+	
+}

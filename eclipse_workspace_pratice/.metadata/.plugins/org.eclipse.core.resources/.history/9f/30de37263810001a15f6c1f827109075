@@ -1,0 +1,39 @@
+package nuc.ss.test4;
+
+
+public class TestSleepThread {
+	public static void main(String[] args) {
+		SleepThread t1 = new SleepThread("t1");
+		SleepThread t2 = new SleepThread("t2");
+		t1.start();
+		t2.start();
+	}
+}
+
+class SleepThread extends Thread {
+	private static Object obj = new Object();
+
+	public ThreadT(String name) {
+		super(name);
+	}
+
+	@Override
+	public synchronized void run() {
+//	public void run() {	
+		try {
+			// 获取obj对象的同步锁
+			synchronized (obj) {
+				for (int i = 0; i < 10; i++) {
+					System.out.printf("%s: %d\n", this.getName(), i);
+					// i能被4整除时,t1休眠3秒
+					if ((i+1) % 4 == 0 && Thread.currentThread().getName().equals("t1")) {
+						System.out.println(Thread.currentThread().getName() + "睡眠三秒!");
+						Thread.sleep(3000);
+					}
+				}
+			}
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+}

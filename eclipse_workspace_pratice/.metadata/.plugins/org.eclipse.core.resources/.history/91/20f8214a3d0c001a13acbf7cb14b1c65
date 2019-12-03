@@ -1,0 +1,5 @@
+package nuc.ss.file;
+
+public class TestFileWriter {
+
+}

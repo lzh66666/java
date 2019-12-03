@@ -1,0 +1,12 @@
+package nuc.ss.file;
+
+/**
+ * ×Ö·ûÊä³öÁ÷
+ * @author Â¬Ôó»ª
+ * @version 2019 11 21 17:00
+ */
+public class TestFileWriter {
+	public static void main(String[] args) {
+		
+	}
+}

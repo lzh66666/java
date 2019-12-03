@@ -1,0 +1,23 @@
+package nuc.ss.datastream;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+/**
+ * 数据输出流
+ * @author 卢泽华
+ * @version 2019 11 21 17:41
+ *
+ */
+public class TestDataOutputStream {
+	public static void main(String[] args) {
+		try {
+			FileOutputStream fout = new FileOutputStream("data.txt");
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}

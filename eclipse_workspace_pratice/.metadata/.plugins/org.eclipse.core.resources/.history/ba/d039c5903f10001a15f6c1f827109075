@@ -1,0 +1,34 @@
+package nuc.ss.test4;
+
+public class TestJoin {
+	public static void main(String[] args) {
+		
+	}
+}
+
+
+class Mythread extends Thread{
+	private boolean state = false;
+	
+	public Mythread(String name) {
+		super(name);
+	}
+	
+	public boolean isState() {
+		return state;
+	}
+	
+	@Override
+	public void run() {
+		for (int i = 0; i <= 3; i++) {
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			
+			System.out.println(this.getName() + "i" + (i+1));
+		}
+		this.state = true;
+	}
+}

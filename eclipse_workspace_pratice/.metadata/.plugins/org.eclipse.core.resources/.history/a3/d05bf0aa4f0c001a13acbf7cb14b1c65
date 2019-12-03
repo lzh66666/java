@@ -1,0 +1,43 @@
+package nuc.ss.printstrem;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import nuc.ss.datastream.Student;
+
+public class TestPrintStream {
+	public static void main(String[] args) {
+		List<Student> list = new ArrayList<Student>();
+		list.add(new Student(1001, "赵", 18));
+		list.add(new Student(1002, "李", 20));
+		list.add(new Student(1003, "王", 20));
+		list.add(new Student(1004, "张", 18));
+		list.add(new Student(1005, "薛", 18));
+		
+		Iterator<Student> iter = list.iterator();
+		Student stu;
+		FileWriter fileout;
+		try {
+			fileout = new FileWriter("printstudent.txt");
+			PrintWriter printout = new PrintWriter(fileout);
+			while(iter.hasNext()) {
+				stu = (Student)iter.next();
+				//导入学生的id
+				printout.print(stu.getId());
+				//写入学生的姓名
+				printout.print(stu.getName());
+				//写入换行符
+				printout.print("\n");
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+}

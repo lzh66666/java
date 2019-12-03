@@ -1,0 +1,19 @@
+package nuc.ss.datastream;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * 学生信息保存
+ * @author 卢泽华
+ * @version 2019 11 21 17:48
+ * 
+ */
+
+public class TestDataStram {
+	public static void main(String[] args) {
+		//已有学生列表,要保存到文件
+		List<Student> list = new ArrayList<Student>();
+		list.add(new Student(1001, "赵", 18))
+	}
+}

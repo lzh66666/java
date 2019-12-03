@@ -1,0 +1,36 @@
+package nuc.ss.test4;
+
+public class TestSleep {
+	public static void main(String[] args) {
+		ThreadT t1 = new ThreadT("t1");
+		ThreadT t2 = new ThreadT("t2");
+		t1.start();
+		t2.start();
+	}
+}
+
+class ThreadT extends Thread {
+	
+	public ThreadT(String name) {
+		super(name);
+	}
+
+	@Override
+	public void run() {
+		try {
+			for (int i = 0; i < 10; i++) {
+				System.out.printf("%s: %d\n", this.getName(), i);
+				// i能被4整除时,休眠3秒
+				if (i % 4 == 0 && Thread.currentThread().getName().equals("t1")) {
+					System.out.println(Thread.currentThread().getName() + 
+							"睡眠三秒!");
+					Thread.sleep(3000);
+				}
+			}
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		} finally {
+			System.out.println("#########");
+		}
+	}
+}

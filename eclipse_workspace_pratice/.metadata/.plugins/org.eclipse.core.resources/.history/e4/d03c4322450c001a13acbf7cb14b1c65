@@ -1,0 +1,34 @@
+package nuc.ss.datastream;
+
+import java.io.DataOutputStream;
+import java.io.FileOutputStream;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+/**
+ * 学生信息保存
+ * @author 卢泽华
+ * @version 2019 11 21 17:48
+ * 
+ */
+
+public class TestDataStram {
+	public static void main(String[] args) {
+		//已有学生列表,要保存到文件
+		List<Student> list = new ArrayList<Student>();
+		list.add(new Student(1001, "赵", 18));
+		list.add(new Student(1002, "李", 20));
+		list.add(new Student(1003, "王", 20));
+		list.add(new Student(1004, "张", 18));
+		list.add(new Student(1005, "薛", 18));
+		
+		//保存学生信息到文件
+		
+		FileOutputStream fileout;
+		DataOutputStream dataout;
+		Iterator<Student> iter = list.iterator();
+		Student stu;
+		
+	}
+}

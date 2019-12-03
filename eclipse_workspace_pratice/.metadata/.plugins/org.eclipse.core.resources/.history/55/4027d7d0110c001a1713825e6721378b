@@ -1,0 +1,11 @@
+package nuc.ss.fileinputstream;
+/**
+ * 字节输入流
+ * @author 卢泽华
+ * @version 2019 11 21 10:44
+ */
+public class TestFileInputStream {
+	public static void main(String[] args) {
+		
+	}
+}

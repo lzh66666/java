@@ -1,0 +1,12 @@
+package nuc.ss.test2;
+
+public class TestSaleTicketThreak {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
+
+class SaleTicketThreak extends Thread

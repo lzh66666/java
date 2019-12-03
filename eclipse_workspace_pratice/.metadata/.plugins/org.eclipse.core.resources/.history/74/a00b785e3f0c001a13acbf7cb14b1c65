@@ -1,0 +1,15 @@
+package nuc.ss.file;
+
+/**
+ * 完成数据的保存于读取
+ * @author 卢泽华
+ * @version 2019 11 21 17:13
+ */
+
+public class TestScore {
+	public static void main(String[] args) {
+		int [] score = {99,30,40,50};
+		int n = 0;
+		//保存数组值
+	}
+}

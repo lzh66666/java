@@ -1,0 +1,15 @@
+package nuc.ss.fileinputstream;
+/**
+ * 用字节流完成给定图片的复制
+ * @author 卢泽华
+ * @version 2019 11 21 12:02
+ */
+public class TestPictureCopy {
+	public static void main(String[] args) {
+		
+	}
+}
+
+class PictureCopy{
+	
+}

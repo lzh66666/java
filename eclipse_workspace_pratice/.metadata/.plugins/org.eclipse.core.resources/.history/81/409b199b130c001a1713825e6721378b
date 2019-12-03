@@ -1,0 +1,11 @@
+package nuc.ss.fileinputstream;
+
+public class PictureCopy {
+	public static void main(String[] args) {
+		
+	}
+}
+
+public class PictureCopy{
+	
+}

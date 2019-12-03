@@ -1,0 +1,12 @@
+package nuc.ss.file;
+
+/**
+ * 
+ * @author Â¬Ôó»ª
+ *
+ */
+public class TestTextCopy {
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,17 @@
+package nuc.ss.test2;
+
+public class TestProperty {
+	public static void main(String[] args) {
+		Thread mt1 = new Thread(new MyProperty());
+	}
+}
+
+class MyProperty implements Runnable{
+
+	@Override
+	public void run() {
+		
+		
+	}
+	
+}

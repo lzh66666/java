@@ -1,0 +1,9 @@
+package nuc.ss.burrered;
+
+import java.io.FileReader;
+
+public class TestBuffer {
+	public static void main(String[] args) {
+		FileReader filein
+	}
+}

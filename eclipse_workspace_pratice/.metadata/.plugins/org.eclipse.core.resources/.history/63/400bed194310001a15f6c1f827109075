@@ -1,0 +1,20 @@
+package nuc.ss.test2;
+
+public class TestProperty2 {
+	public static void main(String[] args) {
+		
+	}
+}
+
+class MyProperty implements Runnable{
+
+	@Override
+	public void run() {
+		System.out.println(Thread.currentThread().getName() + 
+				"线程的priority = " + Thread.currentThread().getPriority() 
+				+ ",它的ID= " + Thread.currentThread().getId() + 
+				",它的state = " + Thread.currentThread().getState());
+		
+	}
+	
+}

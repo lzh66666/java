@@ -1,0 +1,8 @@
+package nuc.ss.test2;
+
+public class TestCount {
+	public static void main(String[] args) {
+		
+	}
+}
+

@@ -1,0 +1,8 @@
+package nuc.ss.printstrem;
+
+public class TestPrintStream {
+	public static void main(String[] args) {
+		
+		
+	}
+}

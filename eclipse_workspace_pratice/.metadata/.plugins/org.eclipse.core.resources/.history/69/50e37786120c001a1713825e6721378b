@@ -1,0 +1,7 @@
+package nuc.ss.fileinputstream;
+
+public class TestFileOutStream {
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,26 @@
+package nuc.ss.file;
+
+import java.io.FileReader;
+
+/**
+ * 用字符流完成给定文件的测定
+ * @author 卢泽华
+ * @version 2019 11 21 20:31
+ *
+ */
+public class TestTextCopy {
+	public static void main(String[] args) {
+		String sourcepath = "example.txt";
+		String destintionpath = "example_copy1.txt";
+		
+		TextCopy copy = new TextCopy();
+		copy.textCopy(sourcepath, destintionpath);
+	}
+}
+
+class TextCopy{
+	public void textCopy(String sourcepath,String destintionpath) {
+		char [] temp = new char[30];
+		FileReader fr
+	}
+}

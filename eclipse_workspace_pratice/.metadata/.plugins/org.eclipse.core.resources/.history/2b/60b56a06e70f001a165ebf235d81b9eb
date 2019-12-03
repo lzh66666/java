@@ -1,0 +1,16 @@
+package nuc.ss.test;
+
+public class TestIMyThread {
+	Thread th = new Thread(new MyThread());
+}
+
+
+class IMyThread implements Runnable{
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

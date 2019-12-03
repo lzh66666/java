@@ -1,0 +1,24 @@
+package nuc.ss.printstrem;
+
+import java.io.FileWriter;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import nuc.ss.datastream.Student;
+
+public class TestPrintStream {
+	public static void main(String[] args) {
+		List<Student> list = new ArrayList<Student>();
+		list.add(new Student(1001, "ÕÔ", 18));
+		list.add(new Student(1002, "Àî", 20));
+		list.add(new Student(1003, "Íõ", 20));
+		list.add(new Student(1004, "ÕÅ", 18));
+		list.add(new Student(1005, "Ñ¦", 18));
+		
+		Iterator<Student> iter = list.iterator();
+		Student stu;
+		FileWriter fileout
+		
+	}
+}

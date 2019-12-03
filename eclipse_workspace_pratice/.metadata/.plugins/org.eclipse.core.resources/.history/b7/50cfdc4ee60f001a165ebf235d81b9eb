@@ -1,0 +1,11 @@
+package nuc.ss.test;
+
+public class TestMyThread {
+
+}
+
+class MyThread extends Thread{
+	public void run() {
+		System.out.println("œﬂ≥Ã÷¥––");
+	}
+}

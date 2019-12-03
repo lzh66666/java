@@ -1,0 +1,23 @@
+package nuc.ss.test2;
+
+public class TestProperty {
+	public static void main(String[] args) {
+		Thread mt1 = new Thread(new MyProperty());
+		Thread mt2 = new Thread(new MyProperty());
+		Thread mt3 = new Thread(new MyProperty());
+		Thread mt4 = new Thread(new MyProperty());
+		
+		mt1.setPriority(0);
+	}
+}
+
+class MyProperty implements Runnable{
+
+	@Override
+	public void run() {
+		System.out.println(Thread.currentThread().getName() + 
+				"Ïß³ÌµÄpriority = " + Thread.currentThread().getPriority());
+		
+	}
+	
+}

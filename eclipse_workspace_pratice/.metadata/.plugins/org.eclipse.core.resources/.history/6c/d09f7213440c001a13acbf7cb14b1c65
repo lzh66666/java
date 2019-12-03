@@ -1,0 +1,10 @@
+package nuc.ss.datastream;
+
+/**
+ * 学生信息保存
+ * @author Administrator
+ *
+ */
+public class TestDataStram {
+
+}

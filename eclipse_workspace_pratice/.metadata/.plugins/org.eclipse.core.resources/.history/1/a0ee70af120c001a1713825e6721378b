@@ -1,0 +1,12 @@
+package nuc.ss.fileinputstream;
+
+/**
+ * 字节输出流
+ * @author 卢泽华
+ * @version 2019 11 21 11:53
+ */
+public class TestFileOutStream {
+	public static void main(String[] args) {
+		
+	}
+}

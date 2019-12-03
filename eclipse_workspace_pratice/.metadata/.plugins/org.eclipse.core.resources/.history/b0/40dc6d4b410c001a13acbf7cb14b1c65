@@ -1,0 +1,11 @@
+package nuc.ss.datastream;
+/**
+ * 数据输入流
+ * @author 卢泽华
+ * @version 2019 11 21 17:28
+ */
+public class TestDataInputStream {
+	public static void main(String[] args) {
+		
+	}
+}

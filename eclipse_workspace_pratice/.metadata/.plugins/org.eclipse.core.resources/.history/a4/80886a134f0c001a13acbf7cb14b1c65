@@ -1,0 +1,12 @@
+package nuc.ss.printstrem;
+
+import java.util.List;
+
+import nuc.ss.datastream.Student;
+
+public class TestPrintStream {
+	public static void main(String[] args) {
+		List<Student> list
+		
+	}
+}

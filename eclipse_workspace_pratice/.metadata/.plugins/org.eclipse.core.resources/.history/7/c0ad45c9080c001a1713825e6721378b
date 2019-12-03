@@ -1,0 +1,7 @@
+package nec.ss.fileinputstream;
+
+public class TestFileInputStream {
+	public static void main(String[] args) {
+		
+	}
+}

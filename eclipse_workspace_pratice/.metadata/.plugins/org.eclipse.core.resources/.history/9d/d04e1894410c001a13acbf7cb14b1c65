@@ -1,0 +1,29 @@
+package nuc.ss.datastream;
+
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+/**
+ * 数据输入流
+ * @author 卢泽华
+ * @version 2019 11 21 17:28
+ * 
+ */
+public class TestDataInputStream {
+	public static void main(String[] args) {
+		FileInputStream fin;
+		try {
+			fin = new FileInputStream("example.txt");
+			DataInputStream inData = new DataInputStream(fin);
+			int age = inData.read();	
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}
