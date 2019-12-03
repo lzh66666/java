@@ -1,0 +1,48 @@
+package nuc.ss.teststudent;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+public class TestStudentList {
+	public static void main(String[] args) {
+		List<Student2> list = new ArrayList<Student2>();
+		
+	}
+}
+
+
+class StudentList{
+	/**
+	 * 保存学生成员
+	 * @param list
+	 */
+	public void init(List<Student2> list) {
+		Student2 stu1,stu2,stu3,stu4,stu5,stu6;
+		stu1 = new Student2(18001, "张剑飞", 20);
+		stu2 = new Student2(18001, "李隆基", 18);
+		stu3 = new Student2(18003, "孙正贤", 19);
+		stu4 = new Student2(18004, "赵匡胤", 20);
+		stu5 = new Student2(18005, "孙祥熙", 17);
+		stu6 = new Student2(18001, "张剑飞", 20);
+		
+
+		list.add(stu1);
+		list.add(stu2);
+		list.add(stu3);
+		list.add(stu4);
+		list.add(stu5);
+	}
+	
+	/**
+	 * 遍历成员
+	 * @param list
+	 */
+	public void print(List<Student2> list) {
+		Iterator<Student2> iter = list.iterator();
+		while(iter.hasNext()) {
+			System.out.println(iter.next());
+		}
+	}
+}

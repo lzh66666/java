@@ -1,0 +1,6 @@
+package nuc.ss.test3;
+
+public class Student {
+	private int no;
+	private String name
+}

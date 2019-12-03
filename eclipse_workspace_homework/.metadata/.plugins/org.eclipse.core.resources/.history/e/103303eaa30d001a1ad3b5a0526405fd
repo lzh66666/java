@@ -1,0 +1,9 @@
+package nuc.ss.test1_1;
+
+import java.io.File;
+
+public class TestText {
+	public static void main(String[] args) {
+		File file = new File("text.txt");
+	}
+}

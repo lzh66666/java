@@ -1,0 +1,43 @@
+package nuc.ss.testcompare;
+
+
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+/**
+ * 
+ * @author Â¬Ôó»ª
+ * @version 2019 11 19 14:22
+ */
+public class TestStudentSet {
+	@SuppressWarnings("unchecked")
+	public static void main(String[] args) {
+		
+		Student stu1,stu2,stu3,stu4,stu5,stu6;
+		stu1 = new Student(18001, "ÕÅ½£·É", 20);
+		stu2 = new Student(18001, "ÀîÂ¡»ù", 18);
+		stu3 = new Student(18003, "ËïÕıÏÍ", 19);
+		stu4 = new Student(18004, "ÕÔ¿ïØ·", 20);
+		stu5 = new Student(18005, "ËïÏéÎõ", 17);
+		stu6 = new Student(18001, "ÕÅ½£·É", 20);
+		Set<Student> set = new HashSet<Student>();
+
+		set.add(stu1);
+		set.add(stu2);
+		set.add(stu3);
+		set.add(stu4);
+		set.add(stu5);
+		
+		Iterator<Student> iter = set.iterator();
+		System.out.println("");
+		while(iter.hasNext()) {
+			System.out.println(iter.next());
+		}
+		
+		set.remove(stu3);
+		while(iter.hasNext()) {
+			System.out.println(iter.next());
+		}
+	}
+}

@@ -1,0 +1,39 @@
+package nuc.ss.teststudent;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+
+public class TestStudentMap {
+	public static void main(String[] args) {
+		Map<Integer, Student2> map = new HashMap<Integer, Student2>();
+		Iterator<Entry<Integer, Student2>> iter = map.entrySet().iterator();
+		
+		
+	}
+}
+
+class StudentMap{
+	/**
+	 * 保存学生成员
+	 * @param map
+	 */
+	public void init(Map<Integer, Student2> map) {
+		Student2 stu1,stu2,stu3,stu4,stu5,stu6;
+		stu1 = new Student2(18001, "张剑飞", 20);
+		stu2 = new Student2(18001, "李隆基", 18);
+		stu3 = new Student2(18003, "孙正贤", 19);
+		stu4 = new Student2(18004, "赵匡胤", 20);
+		stu5 = new Student2(18005, "孙祥熙", 17);
+		stu6 = new Student2(18001, "张剑飞", 20);
+
+		map.put(18001, stu1);
+		map.put(18002, stu2);
+		map.put(18003, stu3);
+		map.put(18004, stu4);
+		map.put(18005, stu5);
+		map.put(18006, stu6);
+	}
+}

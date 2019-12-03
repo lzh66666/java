@@ -1,0 +1,29 @@
+package nuc.ss.test;
+
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+/**
+ * 正则表达式身份证号
+ * @author 卢泽华
+ * @version 2019 11 24 17:07
+ * 
+ */
+public class TestRegexIP {
+	public static void main(String[] args) {
+		System.out.println("请输入IP地址：");
+		Scanner sc = new Scanner(System.in);
+		String id =sc.next();
+		String regex = "^(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|[1-9])\\."
+						+ "(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)\\."
+						+ "(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)\\."
+						+ "(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)$";
+		Pattern p = Pattern.compile(regex);
+		Matcher m = p.matcher(id);
+		if(m.matches())
+			System.out.println("IP地址" + id + "格式正确！");
+		else
+			System.out.println("IP地址" + id + "格式不正确！");
+	}
+}

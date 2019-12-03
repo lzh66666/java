@@ -1,0 +1,37 @@
+package nuc.ss.test2;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+public class TestTextCopy {
+	public static void main(String[] args) {
+		String source = "text.txt";
+		String sourceCopyByByte = "text_byte_copy.txt";
+		String sourceCopyByChar = "text_char_copy.txt";
+	}
+}
+
+class TextCopy{
+	public void textCopyByByte(String source,String sourceCopyByByte) {
+		byte [] temp = new byte[16];
+		try {
+			FileInputStream fin = new FileInputStream(source);
+			FileOutputStream fout = new FileOutputStream(sourceCopyByByte);
+			while(fin.read(temp) != -1) {
+				
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public void textCopyByChar(String source,String sourceCopyByChar) {
+		
+	}
+}

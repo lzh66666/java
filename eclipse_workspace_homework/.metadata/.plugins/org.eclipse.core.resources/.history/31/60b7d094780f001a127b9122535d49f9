@@ -1,0 +1,19 @@
+package nuc.ss.teststudent;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+
+public class TestStudentMap {
+	public static void main(String[] args) {
+		Map<Integer, Student2> map = new HashMap<Integer, Student2>();
+		Iterator<Entry<Integer, Student2>> iter = map.entrySet().iterator();
+		
+		
+	}
+}
+
+class StudentMap{
+	
+}

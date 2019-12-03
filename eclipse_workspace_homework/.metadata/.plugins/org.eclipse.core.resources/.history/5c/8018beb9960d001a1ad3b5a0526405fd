@@ -1,0 +1,17 @@
+package nuc.ss.test2;
+
+public class TestTextCopy {
+	public static void main(String[] args) {
+		String source
+	}
+}
+
+class TextCopy{
+	public void textCopyByByte() {
+		
+	}
+	
+	public void textCopyByChar() {
+		
+	}
+}

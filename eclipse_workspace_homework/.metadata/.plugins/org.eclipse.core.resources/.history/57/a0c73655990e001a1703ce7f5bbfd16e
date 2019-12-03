@@ -1,0 +1,18 @@
+package nuc.ss.test;
+
+import java.util.Scanner;
+
+/**
+ * 正则表达式身份证号
+ * @author 卢泽华
+ * @version 2019 11 24 17:02
+ */
+public class TestRegex {
+	public static void main(String[] args) {
+		System.out.println("请输入身份证号：");
+		Scanner sc = new Scanner(System.in);
+		String id =sc.next();
+
+		
+	}
+}

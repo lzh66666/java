@@ -1,0 +1,98 @@
+package nuc.ss.test3;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+/**
+ * ����������ɶ�ѧ����Ϣ�ı������ȡ
+ * @author ¬��
+ * @version 2019 11 23 10:43
+ */
+public class TestDataStream {
+	public static void main(String[] args) {
+		List<Student> list = new ArrayList<Student>();
+		
+		list.add(new Student(18001,"张三",18));
+		list.add(new Student(18002,"����",19));
+		list.add(new Student(18003,"����",17));
+		list.add(new Student(18004,"����",20));
+		list.add(new Student(18005,"����",18));
+		
+		/**
+		 * ��ɶ�ѧ�����ݵĴ�ȡ
+		 */
+		FileOutputStream fout = null;
+		DataOutputStream dout = null;
+		try {
+			fout = new FileOutputStream("studentData.txt");
+			dout = new DataOutputStream(fout);
+			for (int i = 0; i < 5; i++) {
+				dout.writeInt(list.get(i).getNo());
+				dout.writeUTF(list.get(i).getName());
+				dout.writeInt(list.get(i).getAge());	
+			}
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if(fout != null) {
+				try {
+					fout.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			if(dout != null) {
+				try {
+					dout.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		
+		/**
+		 * ��ɶ�ѧ�����ݵĶ�ȡ
+		 */
+		
+		FileInputStream fin = null;
+		DataInputStream din = null;
+		
+		try {
+			fin = new FileInputStream("studentData.txt");
+			din = new DataInputStream(fin);
+			for (int i = 0; i < 5; i++) {
+				System.out.println("��" + (i+1) + "��ѧ������ϢΪ:ѧ��=" + 
+						din.readInt() +",����=" + din.readUTF()
+						+ ",����=" + din.readInt());
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if(fin != null) {
+				try {
+					fout.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			if(din != null) {
+				try {
+					dout.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		
+	}
+}

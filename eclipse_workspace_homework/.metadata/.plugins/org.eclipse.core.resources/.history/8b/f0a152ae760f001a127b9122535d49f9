@@ -1,0 +1,32 @@
+package nuc.ss.teststudent;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
+public class TestStudentList {
+	public static void main(String[] args) {
+		List<Student2> list = new ArrayList<Student2>();
+		
+	}
+}
+
+
+class StudentList{
+	public void init(List<Student2> list) {
+		Student2 stu1,stu2,stu3,stu4,stu5,stu6;
+		stu1 = new Student2(18001, "ÕÅ½£·É", 20);
+		stu2 = new Student2(18001, "ÀîÂ¡»ù", 18);
+		stu3 = new Student2(18003, "ËïÕıÏÍ", 19);
+		stu4 = new Student2(18004, "ÕÔ¿ïØ·", 20);
+		stu5 = new Student2(18005, "ËïÏéÎõ", 17);
+		stu6 = new Student2(18001, "ÕÅ½£·É", 20);
+		
+
+		list.add(stu1);
+		list.add(stu2);
+		list.add(stu3);
+		list.add(stu4);
+		list.add(stu5);
+	}
+}

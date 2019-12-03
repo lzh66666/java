@@ -1,0 +1,23 @@
+package nuc.ss.test2;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
+public class TestTextCopy {
+	public static void main(String[] args) {
+		String source = "text.txt";
+		String sourceCopyByByte = "text_byte_copy.txt";
+		String sourceCopyByChar = "text_char_copy.txt";
+	}
+}
+
+class TextCopy{
+	public void textCopyByByte(String source,String sourceCopyByByte) {
+		FileInputStream fin = new FileInputStream(source);
+		FileOutputStream fout;
+	}
+	
+	public void textCopyByChar(String source,String sourceCopyByChar) {
+		
+	}
+}

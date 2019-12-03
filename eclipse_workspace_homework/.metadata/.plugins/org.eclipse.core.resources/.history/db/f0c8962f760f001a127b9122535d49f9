@@ -1,0 +1,13 @@
+package nuc.ss.teststudent;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class TestStudentList {
+	public static void main(String[] args) {
+		List<Student2> list = new ArrayList<Student2>;
+		
+	}
+}
+
+

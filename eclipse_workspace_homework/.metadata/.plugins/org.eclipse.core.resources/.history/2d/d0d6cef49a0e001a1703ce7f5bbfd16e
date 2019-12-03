@@ -1,0 +1,27 @@
+package nuc.ss.test;
+
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+/**
+ * 正则表达式身份证号
+ * @author 卢泽华
+ * @version 2019 11 24 17:02
+ */
+public class TestRegexId {
+	public static void main(String[] args) {
+		System.out.println("请输入身份证号：");
+		Scanner sc = new Scanner(System.in);
+		String id =sc.next();
+		//第一步：调用Pattern的compile方法创建一个模式//对象，模式对象是对正则表达式的封装
+		Pattern p = Pattern.compile("^\\d{18}|\\d{17}X$");
+		//第二步：模式对象p调用matcher方法得到一个匹配//对象m
+		Matcher m = p.matcher(id);
+		//第三步：匹配对象m调用machers,判断输入是否和//正则表达式匹配
+		if(m.matches())
+			System.out.println("身份证" + id + "格式正确！");
+		else
+			System.out.println("身份证" + id + "格式不正确！");
+	}
+}

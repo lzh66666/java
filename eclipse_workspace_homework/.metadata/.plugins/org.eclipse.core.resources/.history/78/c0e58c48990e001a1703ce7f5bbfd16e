@@ -1,0 +1,12 @@
+package nuc.ss.test;
+/**
+ * 正则表达式身份证号
+ * @author 卢泽华
+ * @version 2019 11 24 17:02
+ */
+public class TestRegex {
+	public static void main(String[] args) {
+		
+		
+	}
+}

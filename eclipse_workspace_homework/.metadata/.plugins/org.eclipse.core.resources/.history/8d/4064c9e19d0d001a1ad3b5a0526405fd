@@ -1,0 +1,91 @@
+package nuc.ss.test3;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+/**
+ * 用数据流完成对学生信息的保存与读取
+ * @author 卢泽华
+ * @version 2019 11 23 10:43
+ */
+public class TestDataStream {
+	public static void main(String[] args) {
+		List<Student> list = new ArrayList<Student>();
+		
+		list.add(new Student(18001,"张三",18));
+		list.add(new Student(18002,"王五",19));
+		list.add(new Student(18003,"李四",17));
+		list.add(new Student(18004,"赵六",20));
+		list.add(new Student(18005,"韩七",18));
+		
+		Student stu;
+		
+		/**
+		 * 完成对学生数据的存取
+		 */
+		FileOutputStream fout = null;
+		DataOutputStream dout = null;
+		try {
+			stu = new Student();
+			fout = new FileOutputStream("student.txt");
+			dout = new DataOutputStream(fout);
+			for (int i = 0; i < 5; i++) {
+				dout.writeInt(list.get(i).getNo());
+				dout.writeUTF(stu.getName());
+				dout.writeInt(stu.getAge());
+				dout.writeUTF("\r\n");	
+			}
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if(fout != null) {
+				try {
+					fout.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			if(dout != null) {
+				try {
+					dout.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+		
+		/**
+		 * 完成对学生数据的读取
+		 */
+		
+		FileInputStream fin = null;
+		DataInputStream din = null;
+		
+		try {
+			stu = new Student();
+			fin = new FileInputStream("student.txt");
+			din = new DataInputStream(fin);
+			System.out.println(din.readInt() + " ");
+			System.out.println(din.readUTF() + " ");
+			System.out.println(din.readInt() + " ");
+			System.out.println();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}

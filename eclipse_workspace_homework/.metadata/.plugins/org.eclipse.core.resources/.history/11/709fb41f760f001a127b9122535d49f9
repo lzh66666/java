@@ -1,0 +1,10 @@
+package nuc.ss.teststudent;
+
+public class TestStudentList {
+	public static void main(String[] args) {
+		
+		
+	}
+}
+
+

@@ -1,0 +1,15 @@
+package nuc.ss.test2;
+
+public class TestTextCopy {
+	
+}
+
+class TextCopy{
+	public void textCopyByByte() {
+		
+	}
+	
+	public void textCopyByChar() {
+		
+	}
+}
