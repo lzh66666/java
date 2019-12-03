@@ -1,0 +1,18 @@
+package nuc.ss.shopping.service;
+
+import nuc.ss.shopping.entiy.User;
+
+public class TestDemo {
+	public static void main(String[] args) {
+		IUserService us = new UserServiceImpl();
+		
+		//用户注册
+		String[] userinfo = {"u00008","普通用户","pw00006","马六","1","天津"};
+		User user = new User(userinfo);
+		String resinfo = us.register(user);
+		
+		System.out.println(resinfo);
+		
+		
+	}
+}

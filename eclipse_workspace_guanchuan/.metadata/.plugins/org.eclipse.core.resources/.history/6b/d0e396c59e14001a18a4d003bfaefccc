@@ -1,0 +1,9 @@
+package nuc.ss.shopping.frame;
+
+import javax.swing.JFrame;
+
+public class RegisterRegFrame extends JFrame{
+	private static final long serialVersionUID = 1L;
+	
+	private RegisterRegFrame registerRegFrame;
+}

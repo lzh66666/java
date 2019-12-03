@@ -1,0 +1,17 @@
+package nuc.ss.shopping.service;
+
+import nuc.ss.shopping.entiy.User;
+
+public class UserServiceImpl implements IUserService{
+
+	@Override
+	public String register(User user) {
+		if()
+	}
+
+	@Override
+	public boolean login(User user) {
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+package nuc.ss.shopping.dao;
+
+public class TestDemo {
+	public static void main(String[] args) {
+		IUserDao ur = new UserDaoImpl();
+		
+		String[] userinfo1 = {"u00001","普通用户","pw00001","张三","1","北京"};
+		String[] userinfo2 = {"u00002","普通用户","pw00002","李四","1","北京"};
+		String[] userinfo3 = {"u00009","管理员","pw00009","钱九","1","北京"};
+	}
+}

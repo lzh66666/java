@@ -1,0 +1,9 @@
+package nuc.ss.shopping.dao;
+
+import nuc.ss.shopping.entiy.Book;
+
+public interface IShoppingCart {
+	public void buy(Book book,);
+	
+	public void remove(Book book);
+}

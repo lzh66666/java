@@ -1,0 +1,30 @@
+package nuc.ss.shopping.service;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import nuc.ss.shopping.entiy.User;
+
+public class UserServiceImpl implements IUserService{
+
+	@Override
+	public String register(User user) {
+		if(useridIsValue(user.getId()))
+	}
+	
+	private boolean useridIsValue(String id) {
+		Pattern p = Pattern.compile("^u\\d{5}$");
+		Matcher m = p.matcher(id);
+		if(m.matches()) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+
+	@Override
+	public boolean login(User user) {
+		
+	}
+
+}

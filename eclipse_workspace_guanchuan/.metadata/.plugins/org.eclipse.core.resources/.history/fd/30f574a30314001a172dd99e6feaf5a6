@@ -1,0 +1,50 @@
+package nuc.ss.shopping.frame;
+
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class AdminAddBookFrame extends JFrame implements ActionListener{
+	private static final long serialVersionUID = 1L;
+	JLabel lb1,lb2,lb3,lb4,lb5,lb6,lb7;
+	JButton addBtn,resetBtn;
+	JTextField bidText,nameText,authorText,priceText,saveText;
+	JComboBox<String> firstCb,secondCb;
+	
+	public AdminAddBookFrame() {
+		setTitle("添加书籍窗体");
+		setBounds(300,100,300,500);
+		setResizable(false);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLayout(new GridLayout(8,2,0,20));
+		init();
+		
+		setVisible(true);
+	}
+	private void init() {
+		
+		
+		lb1 = new JLabel("编号");
+		bidText = new JTextField();
+		add(lb1);add(bidText);
+		
+		lb2 = new JLabel("书名");
+		nameText = new JTextField();
+		add(lb2);add(nameText);
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		
+	}
+	
+	public static void main(String[] args) {
+		new AdminAddBookFrame();
+	}
+
+}

@@ -1,0 +1,12 @@
+package nuc.ss.shopping.dao;
+
+import java.util.List;
+import nuc.ss.shopping.entiy.Book;
+
+public interface IBookDao {
+	public Book[] queryAllBooks();
+	
+	public Book queryBookById(String id);
+	
+	public List<Book> queryBook(String name, int category);
+}

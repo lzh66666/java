@@ -1,0 +1,63 @@
+package nuc.ss.shopping.frame;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+
+import nuc.ss.shopping.entiy.User;
+
+public class AdminMainFrame extends JFrame implements ActionListener{
+	private static final long serialVersionUID = 1L;
+	JMenu shoppingmanager,ordermanager,personmanager;
+	JMenu shoppingmanager21,shoppingmanager22;
+	JMenuItem s11,s12,s2,s3;
+	JMenuBar mb;
+	public AdminMainFrame(User u) {
+		setTitle("电商购物平台系统[欢迎" + u.getName() + "管理员登录系统]");
+		setBounds(200,200,400,300);
+		setResizable(false);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		init();
+		
+		setVisible(true);
+	}
+	private void init() {
+		
+		mb = new JMenuBar();
+		
+		shoppingmanager = new JMenu("商品管理");
+		shoppingmanager21 = new JMenu("查询商品信息");
+		s11 = new JMenuItem("按商品类别查询");
+		s12 = new JMenuItem("按商品名称查询");
+		s2 = new JMenuItem("添加商品 ");
+		s3 = new JMenuItem("删除商品 ");
+		
+		shoppingmanager.add(shoppingmanager21);
+		shoppingmanager21.add(s11);
+		shoppingmanager21.add(s12);
+		
+		shoppingmanager.add(s2);
+		shoppingmanager.add(s3);
+		mb.add(shoppingmanager);
+		
+		
+		ordermanager = new JMenu("订单管理");
+		mb.add(ordermanager);
+		
+		personmanager = new JMenu("角色管理");
+		mb.add(personmanager);
+		
+		setJMenuBar(mb);		
+
+
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		
+	}
+}

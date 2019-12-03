@@ -1,0 +1,28 @@
+package nuc.ss.shopping.dao;
+
+import java.util.List;
+import java.util.Map;
+
+import nuc.ss.shopping.entiy.Book;
+
+public class BookDaoImpl implements IBookDao{
+
+	@Override
+	public Map<String, Book> queryAllBooks() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Map<String, Book> queryBookById(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Book> queryBook(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

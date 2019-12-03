@@ -1,0 +1,49 @@
+package nuc.ss.shopping.service;
+
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import nuc.ss.shopping.dao.BookDaoImpl;
+import nuc.ss.shopping.dao.IBookDao;
+import nuc.ss.shopping.entiy.Book;
+
+public class BookServiceImpl implements IBookService{
+	private IBookDao bDao = new BookDaoImpl();
+	@Override
+	public String addBook(Book book) {
+		if(bookIdIsValid(book.getBid())) {
+			List<Book> books = bDao.queryAllBooks();
+			for (int i = 0; i < books.size(); i++) {
+				if(books.get(i).getBid().equals(book.getBid())) {
+					bDao.addOldBook(book);
+					return "添加已有书籍" + book.getName() + book.getNum() + "本";
+				}
+			}
+			bDao.addNewBook(book);
+			return "添加新书" + book.getName() + book.getNum() + "本";
+		}else {
+			return "书籍编号错误,编号必须以b开头,5位数字";
+		}
+	}
+	
+	private boolean bookIdIsValid(String id) {
+		Pattern p = Pattern.compile("^[b]\\d{5}$");
+		Matcher m = p.matcher(id);
+		if(m.matches()) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	private boolean bookNumIsNumber(String num) {
+		Pattern p = Pattern.compile("^[-\\+]?[\\d]*$");
+		Matcher m = p.matcher(num);
+		if(m.matches()) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+}

@@ -1,0 +1,9 @@
+package nuc.ss.shopping.frame;
+
+import javax.swing.JFrame;
+
+public class AdminMainFrame extends JFrame{
+	public AdminMainFrame() {
+		
+	}
+}

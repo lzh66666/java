@@ -1,0 +1,68 @@
+package nuc.ss.shopping.frame;
+
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class AdminMainFrame extends JFrame implements ActionListener{
+	private static final long serialVersionUID = 1L;
+	
+	JLabel lb1,lb2,lb3;
+	JTextField text1,text2;
+	JComboBox<String> cb;
+	JButton button1,button2,button3;
+	JPanel panel1,jPanel2;
+	
+	public AdminMainFrame() {
+		setTitle("登录注册窗体");
+		setBounds(200,200,300,300);
+		setResizable(false);
+		
+		init();
+		
+		setVisible(true);
+	}
+
+	private void init() {
+		setLayout(new BorderLayout());
+		panel1 = new JPanel();
+		panel1.setLocale(new BorderLayout());
+		panel1.setLayout(new GridLayout(3,2));
+		lb1 = new JLabel("用户名");
+		lb2 = new JLabel("用户类型");
+		lb3 = new JLabel("用户密码");
+		text1 = new JTextField();
+		text2 = new JTextField();
+		cb = new JComboBox<String>();
+		cb.addItem("普通用户");
+		cb.addItem("管理员");
+		
+		panel1.add(lb1);
+		panel1.add(text1);
+		panel1.add(lb2);
+		panel1.add(cb);
+		panel1.add(lb3);
+		panel1.add(text2);
+		
+		add(panel1);
+		
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		
+	}
+	
+	public static void main(String[] args) {
+		new AdminMainFrame();
+	}
+}

@@ -1,0 +1,9 @@
+package nuc.ss.shopping.dao;
+
+import java.util.Map;
+
+import nuc.ss.shopping.entiy.User;
+
+public interface IUser {
+	public Map<String, User> getUsers();
+}

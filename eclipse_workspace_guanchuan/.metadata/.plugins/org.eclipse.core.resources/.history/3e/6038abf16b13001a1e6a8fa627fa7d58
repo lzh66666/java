@@ -1,0 +1,9 @@
+package nuc.ss.shopping.service;
+
+public class TestDemo {
+	public static void main(String[] args) {
+		IUserService us = new UserServiceImpl();
+		
+		String[] userinfo
+	}
+}

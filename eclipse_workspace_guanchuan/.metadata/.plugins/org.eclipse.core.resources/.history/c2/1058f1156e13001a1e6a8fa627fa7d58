@@ -1,0 +1,32 @@
+package nuc.ss.shopping.frame;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class AdminMainFrame extends JFrame implements ActionListener{
+	JLabel lb1,lb2,lb3;
+	JTextField tf
+	public AdminMainFrame() {
+		setTitle("µÇÂ¼×¢²á´°Ìå");
+		setBounds(200,200,300,300);
+		setResizable(false);
+		
+		init();
+		
+		setVisible(true);
+	}
+
+	private void init() {
+		
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		
+	}
+}

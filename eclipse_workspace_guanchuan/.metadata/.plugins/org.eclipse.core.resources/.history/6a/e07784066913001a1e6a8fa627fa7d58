@@ -1,0 +1,7 @@
+package nuc.ss.shopping.service;
+
+import nuc.ss.shopping.entiy.User;
+
+public interface IUserService {
+	public String register(User u)
+}

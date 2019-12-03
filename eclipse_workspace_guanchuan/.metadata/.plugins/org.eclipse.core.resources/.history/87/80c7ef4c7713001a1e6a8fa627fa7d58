@@ -1,0 +1,9 @@
+package nuc.ss.shopping.frame;
+
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+
+public class UserMainFrame extends JFrame implements ActionListener{
+	
+}

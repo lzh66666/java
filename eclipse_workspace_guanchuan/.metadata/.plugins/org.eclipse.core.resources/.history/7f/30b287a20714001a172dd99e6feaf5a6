@@ -1,0 +1,9 @@
+package nuc.ss.shopping.entiy;
+
+public class Book {
+	private String bid;
+	private String name;
+	private String author;
+	private String num;
+	private Category category;
+}

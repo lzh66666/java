@@ -1,0 +1,9 @@
+package nuc.ss.shopping.service;
+
+public class TestBookDemo {
+	public static void main(String[] args) {
+		IBookService bs = new BookServiceImpl();
+		
+		String[] bookinfo
+	}
+}

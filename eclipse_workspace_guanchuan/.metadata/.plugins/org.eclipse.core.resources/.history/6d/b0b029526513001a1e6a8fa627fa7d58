@@ -1,0 +1,12 @@
+package nuc.ss.shopping.entiy;
+
+public class User {
+	private String id;
+	private String type;
+	private String password;
+	private String name;
+	private String sex;
+	private String city;
+	
+	
+}

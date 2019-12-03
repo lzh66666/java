@@ -1,0 +1,131 @@
+package nuc.ss.shopping.entity;
+
+import nuc.ss.shopping.exception.CartyException;
+
+public class User implements Cloneable{
+	private String id; 			// 用户编号
+	private String name; 		// 用户姓名
+	private String password; 	// 用户密码
+	private byte sex; 			// 性别: 1男， 0女
+	private String city; 		// 所在城市
+	private ShoppingCart shoppingCart;
+
+	public User(String id, String name, String password, Byte sex, String city,ShoppingCart shoppingCart) {
+		this.id = id;
+		this.name = name;
+		this.password = password;
+		this.sex = sex;
+		this.city = city;
+		this.shoppingCart = shoppingCart;
+	}
+	
+	public ShoppingCart getShoppingCart() {
+		return shoppingCart;
+	}
+
+	public void setShoppingCart(ShoppingCart shoppingCart) {
+		this.shoppingCart = shoppingCart;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public Byte getSex() {
+		return sex;
+	}
+
+	public void setSex(Byte sex) {
+		this.sex = sex;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+	
+	/**
+	 * 购买书籍，将书籍加入到用户的购物车中
+	 */
+	private static void addBook() {
+		// 请同学们自己完成本方法体代码编写
+		System.out.println("请输入你要购买的书的编号");
+		String bid = scanner.next();
+		System.out.println("请输入你要购买的书的数量");
+		int quantity = scanner.nextInt();
+		Book book = bookDao.queryBookById(bid);
+		
+		if(book == null) {
+			System.out.println("商品信息不存在！");
+			return;
+		}else {
+			try {
+				shoppingCart.buy(book, quantity);
+			} catch (CartyException e) {
+				System.out.println(e.getMessage());
+			}
+		}
+	}
+	/**
+	 * 删除书籍，将书籍从用户的购物车中移除
+	 */
+	public void removeBook() {
+		// 请同学们自己完成本方法体代码编写
+		System.out.println("请输入你要移除的书籍编号");
+		String bid = scanner.next();
+		Book[] books = bookDao.queryAllBooks();
+		for (Book book : books) {
+			if(bid.equals(book.getBid())) {
+				try {
+					shoppingCart.remove(book);
+				} catch (CartyException e) {
+					System.out.println(e.getMessage());
+				}
+			}
+		}
+	}	
+	/**
+	 * 显示用户的购物车
+	 */
+	public void showCart() {
+		// 请同学们自己完成本方法体代码编写
+		System.out.println(shoppingCart);
+	}
+
+	@Override
+	public String toString() {
+		return "用户编号：" + this.getId() + " | 用户名：" + this.getName()
+				+ " | 性别：" + this.getSex() + " | 所在城市：" + this.getCity();
+	}
+
+	@Override
+	public Object clone() throws CloneNotSupportedException {
+		// TODO Auto-generated method stub
+		return super.clone();
+	}
+
+	
+}

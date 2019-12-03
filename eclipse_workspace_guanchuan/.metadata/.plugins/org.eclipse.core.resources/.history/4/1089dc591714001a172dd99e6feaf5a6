@@ -1,0 +1,15 @@
+package nuc.ss.shopping.service;
+
+import nuc.ss.shopping.dao.BookDaoImpl;
+import nuc.ss.shopping.dao.IBookDao;
+import nuc.ss.shopping.entiy.Book;
+
+public class BookServiceImpl implements IBookService{
+	private IBookDao bDao = new BookDaoImpl();
+	@Override
+	public String addBook(Book book) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

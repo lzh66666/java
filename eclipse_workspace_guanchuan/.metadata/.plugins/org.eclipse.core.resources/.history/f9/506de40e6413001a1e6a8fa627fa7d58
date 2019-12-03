@@ -1,0 +1,23 @@
+package nuc.ss.shopping.dao;
+
+import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
+
+import nuc.ss.shopping.entiy.User;
+
+public class UserDaoImpl implements IUser{
+
+	@Override
+	public Map<String, User> getUsers() {
+		Map<String, User> users = new HashMap<String, User>();
+		File f
+	}
+
+	@Override
+	public void addUser(User u) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

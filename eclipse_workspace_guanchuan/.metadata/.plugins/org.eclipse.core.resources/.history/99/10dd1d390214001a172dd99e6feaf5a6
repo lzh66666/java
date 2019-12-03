@@ -1,0 +1,19 @@
+package nuc.ss.shopping.frame;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class AdminAddBookFrame extends JFrame implements ActionListener{
+	private static final long serialVersionUID = 1L;
+	JLabel lb1.lb2,lb3,lb4,lb5,lb6,lb7;
+	JButton button1,button2;
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		
+	}
+
+}

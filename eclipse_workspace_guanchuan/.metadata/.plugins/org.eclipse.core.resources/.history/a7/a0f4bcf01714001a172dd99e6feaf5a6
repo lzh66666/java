@@ -1,0 +1,32 @@
+package nuc.ss.shopping.service;
+
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import nuc.ss.shopping.dao.BookDaoImpl;
+import nuc.ss.shopping.dao.IBookDao;
+import nuc.ss.shopping.entiy.Book;
+
+public class BookServiceImpl implements IBookService{
+	private IBookDao bDao = new BookDaoImpl();
+	@Override
+	public String addBook(Book book) {
+		if(bookIdIsValid(book.getBid())) {
+			List<Book> books = bDao.queryAllBooks();
+		}
+		
+		
+		return null;
+	}
+	
+	private boolean bookIdIsValid(String id) {
+		Pattern p = Pattern.compile("^[b]\\d{5}$");
+		Matcher m = p.matcher(id);
+		if(m.matches()) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+}

@@ -1,0 +1,15 @@
+package nuc.ss.shopping.frame;
+
+import javax.swing.JFrame;
+
+public class AdminMainFrame extends JFrame{
+	public AdminMainFrame() {
+		setTitle("µÇÂ¼×¢²á´°Ìå");
+		setBounds(200,200,300,300);
+		setResizable(false);
+		
+		init();
+		
+		setVisible(true);
+	}
+}

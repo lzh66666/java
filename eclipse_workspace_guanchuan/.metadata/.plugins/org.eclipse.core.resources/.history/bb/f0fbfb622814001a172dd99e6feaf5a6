@@ -1,0 +1,101 @@
+package nuc.ss.shopping.frame;
+
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
+public class AdminAddBookFrame extends JFrame implements ActionListener{
+	private static final long serialVersionUID = 1L;
+	JLabel lb1,lb2,lb3,lb4,lb5,lb6,lb7;
+	JButton addBtn,resetBtn;
+	JTextField bidText,nameText,authorText,priceText,saveText;
+	JComboBox<String> firstCb,secondCb;
+	
+	public AdminAddBookFrame() {
+		setTitle("添加书籍窗体");
+		setBounds(300,100,300,500);
+		setResizable(false);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		init();
+		
+		setVisible(true);
+	}
+	private void init() {
+		this.setLayout(new GridLayout(8,2,0,20));
+		
+		lb1 = new JLabel("编号",JLabel.CENTER);
+		bidText = new JTextField();
+		add(lb1);add(bidText);
+		
+		lb2 = new JLabel("书名",JLabel.CENTER);
+		nameText = new JTextField();
+		add(lb2);add(nameText);
+		
+		lb3 = new JLabel("一级目录",JLabel.CENTER);
+		firstCb = new JComboBox<String>();
+		firstCb.addItem("工具");
+		firstCb.addItem("软件编程");
+		add(lb3);add(firstCb);
+		
+		lb4 = new JLabel("二级目录",JLabel.CENTER);
+		secondCb = new JComboBox<String>();
+		secondCb.addItem("小说");
+		secondCb.addItem("历史");
+		add(lb4);add(secondCb);
+		
+		lb5 = new JLabel("作者",JLabel.CENTER);
+		authorText = new JTextField();
+		add(lb5);add(authorText);
+		
+		lb6 = new JLabel("单价",JLabel.CENTER);
+		priceText = new JTextField();
+		add(lb6);add(priceText);
+		
+		lb7 = new JLabel("库存",JLabel.CENTER);
+		saveText = new JTextField();
+		add(lb7);add(saveText);
+		
+		addBtn = new JButton("添加");
+		resetBtn = new JButton("重置");
+		add(addBtn);add(resetBtn);
+		
+		addBtn.addActionListener(this);
+		resetBtn.addActionListener(this);
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource() == addBtn) {
+			 String bid = bidText.getText().toString();
+			 String name = nameText.getText().toString();
+			 String firstLevel = firstCb.getSelectedItem().toString();
+			 String secondLevel = secondCb.getSelectedItem().toString();
+			 String author = authorText.getText().toString();
+			 String price = priceText.getText().toString();
+			 String num = saveText.getText().toString();
+			JOptionPane.showMessageDialog(null, "添加成功", "消息",
+					JOptionPane.WARNING_MESSAGE);
+		}else {
+			bidText.setText("");
+			nameText.setText("");
+			firstCb.setSelectedIndex(0);
+			secondCb.setSelectedIndex(0);
+			authorText.setText("");
+			priceText.setText("");
+			saveText.setText("");
+			
+		}
+	}
+	
+	public static void main(String[] args) {
+		new AdminAddBookFrame();
+	}
+
+}

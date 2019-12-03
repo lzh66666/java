@@ -1,0 +1,49 @@
+package nuc.ss.shopping.frame;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+
+public class UserMainFrame extends JFrame implements ActionListener{
+	private static final long serialVersionUID = 1L;
+	JMenu shoppiingmanager,ordermanager,personmanager;
+	JMenuItem s1,s2,s3;
+	JMenuBar mb;
+	public UserMainFrame() {
+		setTitle("电商购物平台系统[欢迎普通用户登录系统]");
+		setBounds(200,200,400,300);
+		setResizable(false);
+		
+		init();
+		
+		setVisible(true);
+	}
+	private void init() {
+		mb = new JMenuBar();
+		shoppiingmanager = new JMenu("商品管理");
+		s1 = new JMenuItem("查询商品信息");
+		s2 = new JMenuItem("添加商品 ");
+		s3 = new JMenuItem("删除商品 ");
+		shoppiingmanager.add(s1);
+		shoppiingmanager.add(s2);
+		shoppiingmanager.add(s3);
+		mb.add(shoppiingmanager);
+		ordermanager = new JMenu("订单管理");
+		mb.add(ordermanager);
+		setJMenuBar(mb);		
+
+
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		
+	}
+	
+	public static void main(String[] args) {
+		new UserMainFrame();
+	}
+	
+}

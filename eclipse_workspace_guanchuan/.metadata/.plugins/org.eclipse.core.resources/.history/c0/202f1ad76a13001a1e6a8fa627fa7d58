@@ -1,0 +1,46 @@
+package nuc.ss.shopping.service;
+
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import nuc.ss.shopping.dao.IUserDao;
+import nuc.ss.shopping.dao.UserDaoImpl;
+import nuc.ss.shopping.entiy.User;
+
+public class UserServiceImpl implements IUserService{
+
+	private IUserDao uDao = new UserDaoImpl();
+	@Override
+	public String register(User user) {
+		if(useridIsValid(user.getId()) && passwordIsValid(user.getPassword())) {
+			Map<String, User> users = uDao.getUsers();
+		}
+	}
+	
+	private boolean useridIsValid(String id) {
+		Pattern p = Pattern.compile("^u\\d{5}$");
+		Matcher m = p.matcher(id);
+		if(m.matches()) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	private boolean passwordIsValid(String password) {
+		Pattern p = Pattern.compile("^\\w(6,12)$");
+		Matcher m = p.matcher(password);
+		if(m.matches()) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+
+	@Override
+	public boolean login(User user) {
+		
+	}
+
+}

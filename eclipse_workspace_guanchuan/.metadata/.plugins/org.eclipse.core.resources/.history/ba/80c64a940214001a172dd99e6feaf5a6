@@ -1,0 +1,27 @@
+package nuc.ss.shopping.frame;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class AdminAddBookFrame extends JFrame implements ActionListener{
+	private static final long serialVersionUID = 1L;
+	JLabel lb1,lb2,lb3,lb4,lb5,lb6,lb7;
+	JButton addBtn,resetBtn;
+	JTextField bidText,nameText,authorText,priceText,saveText;
+	JComboBox<String> firstCb,secondCb;
+	
+	public AdminAddBookFrame() {
+		
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		
+	}
+
+}

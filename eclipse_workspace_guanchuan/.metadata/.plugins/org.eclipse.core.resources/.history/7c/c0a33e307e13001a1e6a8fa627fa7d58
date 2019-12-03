@@ -1,0 +1,106 @@
+package nuc.ss.shopping.frame;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
+import nuc.ss.shopping.dao.IUserDao;
+import nuc.ss.shopping.dao.UserDaoImpl;
+import nuc.ss.shopping.entiy.User;
+
+
+public class LoginRegFrame extends JFrame implements ActionListener{
+	private static final long serialVersionUID = 1L;
+	
+	JLabel lb1,lb2,lb3;
+	JTextField text;
+	JPasswordField password;
+	JComboBox<String> cb;
+	JButton button1,button2,button3;
+	JPanel panel1,panel2;
+	
+	public LoginRegFrame() {
+		setTitle("注册窗体");
+		setBounds(200,200,300,300);
+		setResizable(false);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		init();
+		
+		setVisible(true);
+	}
+
+	private void init() {
+		setLayout(new BorderLayout(20,30));
+		
+		panel1 = new JPanel();
+		panel1.setLayout(new GridLayout(3,2,0,20));
+		lb1 = new JLabel("用户名",JLabel.CENTER);
+		lb2 = new JLabel("用户类型",JLabel.CENTER);
+		lb3 = new JLabel("用户密码",JLabel.CENTER);
+		text = new JTextField();
+		password = new JPasswordField();
+		cb = new JComboBox<String>();
+		cb.addItem("普通用户");
+		cb.addItem("管理员");
+		
+		panel1.add(lb1);
+		panel1.add(text);
+		panel1.add(lb2);
+		panel1.add(cb);
+		panel1.add(lb3);
+		panel1.add(password);
+		
+		add(panel1,BorderLayout.CENTER);
+		
+		panel2 = new JPanel();
+		panel2.setLayout(new FlowLayout());
+		button1 = new JButton("登录");
+		button2 = new JButton("重置");
+		button3 = new JButton("点我注册");
+		panel2.add(button1);
+		panel2.add(button2);
+		panel2.add(button3);
+		add(panel2,BorderLayout.SOUTH);
+		
+		button1.addActionListener(this);
+		button2.addActionListener(this);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource() == button1) {
+			String id = text.getText(); 
+			String passward = new String(password.getPassword());
+			String type = (String)cb.getSelectedItem();
+			
+			User u = new User(id, type, password);
+			IUserDao userDao = new UserDaoImpl();
+			User user = userDao.addUser(u);
+			
+			if (user == null) { // 用户编号不存在
+				JOptionPane.showMessageDialog(null, "登录账号或密码不正确", "警告信息",
+						JOptionPane.WARNING_MESSAGE);
+				// 增加用户体验，文本框获得焦点
+				text.requestFocus();
+				// 增加用户体验，选中文本框中的文字
+				text.selectAll();
+				return;
+			}
+		}
+	}
+	
+	public static void main(String[] args) {
+		new LoginRegFrame();
+	}
+}

@@ -1,0 +1,12 @@
+package nuc.ss.shopping.dao;
+
+import nuc.ss.shopping.entiy.Book;
+
+public class TestBookDemo {
+	public static void main(String[] args) {
+		IBookDao bd = new BookDaoImpl();
+		String[] bookinfo1 = {"b00001","水浒传","工具","历史","施耐庵","55.0","30"};
+		String[] bookinfo1 = {"b00002","西游记","工具","历史","吴承恩","58.0","40"};
+		bd.addBook(new Book(bookinfo1));
+	}
+}
